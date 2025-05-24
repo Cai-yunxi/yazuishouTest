@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biomimetic Platypus Bill Vibration-Sound Non-Visual Interaction</title>
+<style>
+  /* 省略之前的样式，为简洁起见 */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #fff;
+    color: #222;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0; padding: 0;
+  }
+  header, nav, main, footer { padding: 1rem 2rem; }
+  header { text-align: center; border-bottom: 1px solid #ddd; background:#fafafa; }
+  nav { display: flex; justify-content: center; gap: 2rem; border-bottom: 1px solid #eee; background:#fff; }
+  nav a { color: #0a5dd1; text-decoration: none; font-weight: 600; padding-bottom: 0.25rem; border-bottom: 2px solid transparent; }
+  nav a.active, nav a:hover { border-bottom-color: #0a5dd1; color:#0a5dd1; }
+  main { max-width: 900px; margin: 2rem auto; }
+  section { margin-bottom: 3rem; }
+  h2 { border-left: 4px solid #0a5dd1; padding-left: 0.75rem; color: #003366; }
+  img, video { max-width: 100%; border-radius: 8px; margin-top: 1rem; }
+  footer { text-align: center; font-size: 0.9rem; color: #777; border-top: 1px solid #eee; }
+</style>
+</head>
+<body>
+
+<img src="example.jpg" alt="example.jpg" />
+
+<nav>
+  <a href="#abstract">Abstract</a>
+  <a href="#exhibition">Tension</a>
+  <a href="#design">Design</a>
+  <a href="#contact">Results Showcase</a>
+</nav>
+
+<main>
+  <section id="abstract">
+    <h2>Author</h2>
+    <p>Cai Yunxi, Lin Yi</p>
+  </section>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>In today’s world, vision is the dominant sense, but millions of visually impaired people cannot use it. Current assistive technologies mostly focus on replacing vision, ignoring other senses. The SOMA theory emphasizes multisensory bodily responses in spatial perception and social interaction. Although biomimetic design is becoming popular, the platypus’s vibration and acoustic sensing abilities are not well studied.​
+    This project introduces a biomimetic interactive device inspired by the platypus bill. It combines vibration actuators and sound feedback to help users localize in space and pair socially with their eyes closed. Through dynamic multisensory feedback, users interact physically in a cycle. Hardware, software, and interaction logic are verified by exhibitions and user studies, showing the device’s effectiveness and innovation. This research paves the way for multisensory fusion interaction and bodily aesthetics design.​</p>
+  </section>
+
+  <section id="exhibition">
+    <h2>Tension</h2>
+    <p>When humans cannot rely on vision, how to perceive spatial and soial information through tactile and vibration signals remains a signiffcant challenge.</p>
+  </section>
+
+  <section id="design">
+    <h2>Design</h2>
+    <p>This project employs 3D printing technology to manufacture a platypus beak device, which features a biomimetic design, is lightweight, and ergonomic. It incorporates multi-directional linear resonant actuators, directional MEMS microphones, and high-frequency speakers to ensure precise vibration and acoustic feedback. The system's core utilizes a CH340G Nano V3 microcomputer and a Bluetooth Low Energy module to enable low-latency synchronization among multiple devices. The software supports dynamic adjustment of vibration and sound intensity, multi-user blind pairing interactions, and enhances physical perception and immersive experiences.</p>
+    <video controls>
+      <source src="5月24日.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+  </section>
+ 
+  <section id="contact">
+    <h2>Results Showcase</h2> 
+    <img src="4.jpg" alt="研究结果展示图4" />
+    <img src="3.jpg" alt="研究结果展示图3" />
+    <img src="1.jpg" alt="研究结果展示图1" />
+    <img src="2.jpg" alt="研究结果展示图2" />
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Cai Yunxi, Lin Yi
+</footer>
+
+<script>
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  // 平滑滚动
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+    
